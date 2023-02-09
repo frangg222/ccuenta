@@ -1,4 +1,3 @@
-
 public class Ccuenta {
 
 	// Atributos de cuenta
@@ -13,7 +12,6 @@ public class Ccuenta {
 		saldo = sal;
 		tipoInteres = tipo;
 	}
-
 	public double getSaldo() {
 		return saldo;
 	}
@@ -24,18 +22,21 @@ public class Ccuenta {
 			System.out.println("Cantidad negativa");
 		saldo = saldo + cantidad;
 	}
-
 	// Para probar JUnit
-	public void retirar(double cantidad) {
-		if (cantidad < 0)
-			System.out.println("Cantidad Negativa");
-		if (this.getSaldo() < cantidad)
-			System.out.println("Saldo insuficiente");
-		saldo = saldo - cantidad;
+		public void retirar(double cantidad) {
+			if (cantidad < 0)
+				System.out.println("Cantidad Negativa");
+			if (this.getSaldo() < cantidad)
+				System.out.println("Saldo insuficiente");
+			saldo = saldo - cantidad;
+		}
+		// Método que me devuelve el número de cuenta
+		public String getCuenta() {
+			return cuenta;
+		}
+		//metodo devuelve nombre
+		public String getnombre() {
+			return nombre;
+		}
+		
 	}
-
-	// Método que me devuelve el número de cuenta
-	public String getCuenta() {
-		return cuenta;
-	}
-}
